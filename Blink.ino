@@ -15,36 +15,28 @@ void setup() {
 
 
 
-void loop()     
+void loop(){     
    
    delay(100);  
 
-// digitalWrite(13, !digitalRead(13)); // blink toogle                            
-                 
+// digitalWrite(13, !digitalRead(13)); // blink toogle                                            
 // digitalWrite(13, millis() / 500 % 2); // blink from millis()          
-
- digitalWrite(random(2), random(2)); // random blink     
-        
-// digitalWrite(13, analogRead(0) % 2); // better random blink     
-      
+   digitalWrite(random(2), random(2)); // random blink            
+// digitalWrite(13, analogRead(0) % 2); // better random blink           
 // digitalWrite(13, c++ % 2); // blink with addition  
-    
-        
- //c < 100000 ? c++ : c = 0; // long time loop blink (comment delay(100))
- //c < 50000 ? digitalWrite(13, 1) : digitalWrite(13, 0); 
-   
-       
-//PORTB xor_eq _BV(5); // pure c blink from toggle   
-      
-//digitalWrite(13, b[c < 27 ? c++ : c = 0]); //MORSE CODE blink  
- 
-        
+// PORTB xor_eq _BV(5); // pure c blink from toggle       
+// digitalWrite(13, b[c < 27 ? c++ : c = 0]); //MORSE CODE blink  
+            
+//c < 100000 ? c++ : c = 0; // long time loop blink (comment delay(100))
+//c < 50000 ? digitalWrite(13, 1) : digitalWrite(13, 0); 
+           
 }//loop
 
 
 
 
 /*
+//Watchdog
 void setup() {
   pinMode(13, OUTPUT);                                      
   cli();     //Disable all interrupt occurring
@@ -69,6 +61,8 @@ void loop() {
 }
 
 
+
+//Timer1A CTC mode 
 ISR(WDT_vect) {
    digitalWrite(13, !digitalRead(13));           
 }
