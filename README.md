@@ -1,2 +1,2 @@
 # HelloWorld
-Many ways of blinking led.
+Many ways of blinking LED.
